@@ -1,7 +1,5 @@
 import React from "react";
 import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
-import narwhalsLogo from "./images/narwhals.png";
-import littleBookOfMLMetricsLogo from "./images/nannyml.png";
 import tuLogo from "./images/tu-logo.png";
 
 const Projects = () => {
