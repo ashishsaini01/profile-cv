@@ -19,7 +19,7 @@ import "./App.css";
 function App() {
     return (
         <ThemeProvider>
-            <Router basename="/profile-cv/">
+            <Router basename="/profile-cv">
                 <div className="app">
                     <Navbar />
                     <main className="main-content">
