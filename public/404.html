@@ -1,25 +1,22 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
-    <title>Redirecting...</title>
-    <script type="text/javascript">
-      // Single Page Apps for GitHub Pages
-      // MIT License
-      // https://github.com/rafgraph/spa-github-pages
-      var pathSegmentsToKeep = 0;
-
+    <meta charset="utf-8" />
+    <title>Redirecting…</title>
+    <script>
+      // redirect if not a direct file link (like favicon.ico)
       var l = window.location;
-      l.replace(
-        l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') +
-        l.pathname.split('/').slice(0, 1 + pathSegmentsToKeep).join('/') + '/?/' +
-        l.pathname.slice(1).split('/').slice(pathSegmentsToKeep).join('/').replace(/&/g, '~and~') +
-        (l.search ? '&' + l.search.slice(1).replace(/&/g, '~and~') : '') +
-        l.hash
-      );
+      var pathname = l.pathname.split('/');
+      var repo = "profile-cv"; // <-- your repo name here
+
+      var newUrl =
+        l.protocol + "//" + l.host + "/" + repo + "/?" +
+        pathname.slice(2).join('/') + l.search + l.hash;
+
+      window.location.replace(newUrl);
     </script>
   </head>
   <body>
-    Redirecting...
+    Redirecting…
   </body>
 </html>
